@@ -23,3 +23,25 @@ Enter total payments for month(2)  : 75
 Your closing balance is $51.51
 
 """
+total = 0
+x = int(input("enter total purchases month 1: "))
+y = int(input("enter total payments month 1: "))
+
+if y <= x:
+    num = x - y
+    intrest = num * 0.02
+    print(f"2% intrest has been charged: ${intrest}")
+    cbalance = num + intrest
+    print(f"closing balance is ${cbalance}")
+
+x2 = int(input("enter total purchases month 2: "))
+y2 = int(input("enter total payments month 2: "))
+
+if y2 <= x2:
+    num2 = (x2 - y2) + num
+    intrest2 = int(intrest)
+    intrest2 = num2 * 0.02
+    print(f"2% intrest has been charged: ${intrest2}")
+    cbalance2 = num2 + intrest2 + intrest
+    print(f"closing balance is ${cbalance2}")
+    
